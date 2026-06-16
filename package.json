@@ -1,0 +1,20 @@
+{
+  "name": "garden-distribution-platform",
+  "version": "1.0.0",
+  "description": "Microservices-based Garden Distribution Platform",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix services/product-service\" \"npm run dev --prefix services/inventory-service\" \"npm run dev --prefix services/order-service\"",
+    "build": "npm run build --prefix services/product-service && npm run build --prefix services/inventory-service && npm run build --prefix services/order-service",
+    "start": "npm start --prefix services/product-service",
+    "docker:up": "docker-compose up --build",
+    "docker:down": "docker-compose down",
+    "install-all": "npm install --prefix services/product-service && npm install --prefix services/inventory-service && npm install --prefix services/order-service"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  },
+  "keywords": ["microservices", "garden", "distribution", "node", "typescript"],
+  "author": "",
+  "license": "MIT"
+}
