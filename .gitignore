@@ -1,2 +1,10 @@
-[A-Z]*.md
 node_modules/
+dist/
+*.sqlite
+*.sqlite3
+*.log
+.env
+.env.*
+.idea/
+.vscode/
+[A-Z0-9._-]*.md

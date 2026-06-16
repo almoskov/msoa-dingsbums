@@ -1,7 +1,9 @@
 import sqlite3 from 'sqlite3';
 import path from 'path';
+import fs from 'fs';
 
 const dbPath = path.join(__dirname, '../data/inventory_db.sqlite');
+fs.mkdirSync(path.dirname(dbPath), { recursive: true });
 
 export const db = new sqlite3.Database(dbPath);
 

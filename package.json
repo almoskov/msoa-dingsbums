@@ -7,9 +7,12 @@
     "dev": "concurrently \"npm run dev --prefix services/product-service\" \"npm run dev --prefix services/inventory-service\" \"npm run dev --prefix services/order-service\"",
     "build": "npm run build --prefix services/product-service && npm run build --prefix services/inventory-service && npm run build --prefix services/order-service",
     "start": "npm start --prefix services/product-service",
+    "docker:build": "docker build -t garden/product-service:local services/product-service && docker build -t garden/inventory-service:local services/inventory-service && docker build -t garden/order-service:local services/order-service",
     "docker:up": "docker-compose up --build",
     "docker:down": "docker-compose down",
-    "install-all": "npm install --prefix services/product-service && npm install --prefix services/inventory-service && npm install --prefix services/order-service"
+    "install-all": "npm install --prefix services/product-service && npm install --prefix services/inventory-service && npm install --prefix services/order-service",
+    "k8s:apply": "kubectl apply -k k8s",
+    "k8s:delete": "kubectl delete -k k8s"
   },
   "devDependencies": {
     "concurrently": "^8.0.0"
