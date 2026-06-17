@@ -7,10 +7,9 @@ metadata:
     kubernetes.io/ingress.class: traefik
 spec:
   rules:
-    - host: product.garden.local
-      http:
+    - http:
         paths:
-          - path: /
+          - path: /products
             pathType: Prefix
             backend:
               service:
