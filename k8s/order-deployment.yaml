@@ -15,8 +15,8 @@ spec:
     spec:
       containers:
         - name: order-service
-          image: ghcr.io/your-org/order-service:latest
-          imagePullPolicy: IfNotPresent
+          image: docker.io/almoskov/order-service:v1
+          imagePullPolicy: Always
           env:
             - name: PORT
               valueFrom:

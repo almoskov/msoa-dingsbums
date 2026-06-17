@@ -15,8 +15,8 @@ spec:
     spec:
       containers:
         - name: product-service
-          image: ghcr.io/your-org/product-service:latest
-          imagePullPolicy: IfNotPresent
+          image: docker.io/almoskov/product-service:v1
+          imagePullPolicy: Always
           env:
             - name: PORT
               valueFrom:

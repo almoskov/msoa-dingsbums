@@ -15,8 +15,8 @@ spec:
     spec:
       containers:
         - name: inventory-service
-          image: ghcr.io/your-org/inventory-service:latest
-          imagePullPolicy: IfNotPresent
+          image: docker.io/almoskov/inventory-service:v1
+          imagePullPolicy: Always
           env:
             - name: PORT
               valueFrom:
